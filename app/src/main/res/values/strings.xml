@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">BandwagongClient</string>
+    <string name="common">常用</string>
+    <string name="shell">命令</string>
+    <string name="other">other</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
