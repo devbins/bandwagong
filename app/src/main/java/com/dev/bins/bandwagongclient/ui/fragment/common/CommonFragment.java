@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.dev.bins.bandwagongclient.R;
@@ -19,12 +20,13 @@ import butterknife.ButterKnife;
  */
 public class CommonFragment extends Fragment implements CommonContract.View {
 
-    private CommonContract.Presenter mPresenter;
     @BindView(R.id.info)
     TextView tv;
+    @BindView(R.id.pb)
+    ProgressBar mPb;
+    private CommonContract.Presenter mPresenter;
 
     public CommonFragment() {
-        // Required empty public constructor
         mPresenter = new CommonPresenter(this);
     }
 
@@ -40,7 +42,6 @@ public class CommonFragment extends Fragment implements CommonContract.View {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_common, container, false);
         ButterKnife.bind(this, rootView);
         return rootView;
@@ -59,6 +60,7 @@ public class CommonFragment extends Fragment implements CommonContract.View {
     }
 
     @Override
+
     public void onPause() {
         super.onPause();
         mPresenter.unsubscribe();
@@ -67,5 +69,14 @@ public class CommonFragment extends Fragment implements CommonContract.View {
     @Override
     public void setText(String text) {
         tv.setText(text);
+    }
+
+    @Override
+    public void showLoad(boolean loading) {
+        if (loading) {
+            mPb.setVisibility(View.VISIBLE);
+        } else {
+            mPb.setVisibility(View.INVISIBLE);
+        }
     }
 }

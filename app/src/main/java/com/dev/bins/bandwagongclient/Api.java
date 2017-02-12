@@ -64,7 +64,7 @@ public interface Api {
 
     @POST("setHostname")
     @FormUrlEncoded
-    Observable<ResultCode> setHostname(@Field("veid") String veid, @Field("api_key") String api_key,@Field("os")String os,@Field("newHostname")String newHostname);
+    Observable<ResultCode> setHostname(@Field("veid") String veid, @Field("api_key") String api_key,@Field("newHostname")String newHostname);
 
 
 

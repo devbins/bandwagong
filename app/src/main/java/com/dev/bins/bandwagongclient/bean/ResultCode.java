@@ -6,6 +6,13 @@ package com.dev.bins.bandwagongclient.bean;
 
 public class ResultCode {
 
-    int error;
+    private int error;
 
+    public int getError() {
+        return error;
+    }
+
+    public void setError(int error) {
+        this.error = error;
+    }
 }

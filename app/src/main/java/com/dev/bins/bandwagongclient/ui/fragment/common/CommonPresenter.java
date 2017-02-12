@@ -25,21 +25,22 @@ public class CommonPresenter implements CommonContract.Presenter {
 
     @Override
     public void subscribe() {
+        mView.showLoad(true);
         Subscriber<ServerInfo> subscriber = new Subscriber<ServerInfo>() {
             @Override
             public void onCompleted() {
                 System.out.println("complete");
+                mView.showLoad(false);
             }
 
             @Override
             public void onError(Throwable e) {
-                System.out.println("error");
-                System.out.println(e);
+                mView.showLoad(false);
+                e.printStackTrace();
             }
 
             @Override
             public void onNext(ServerInfo serverInfo) {
-                System.out.println(serverInfo);
                 mView.setText(serverInfo.toString());
             }
         };
@@ -50,5 +51,7 @@ public class CommonPresenter implements CommonContract.Presenter {
     @Override
     public void unsubscribe() {
         mSubscriptions.clear();
+        if (mSubscriptions != null)
+            mSubscriptions.unsubscribe();
     }
 }

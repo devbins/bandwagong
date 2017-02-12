@@ -77,8 +77,31 @@ public class AvailableOS {
 //        ]
 //    }
 
-    int error;
-    String installed;
-    String[] templates;
+    private int error;
+    private String installed;
+    private String[] templates;
 
+    public int getError() {
+        return error;
+    }
+
+    public void setError(int error) {
+        this.error = error;
+    }
+
+    public String getInstalled() {
+        return installed;
+    }
+
+    public void setInstalled(String installed) {
+        this.installed = installed;
+    }
+
+    public String[] getTemplates() {
+        return templates;
+    }
+
+    public void setTemplates(String[] templates) {
+        this.templates = templates;
+    }
 }

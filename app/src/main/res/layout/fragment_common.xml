@@ -11,4 +11,10 @@
         android:layout_height="match_parent"
         tools:text="@string/common" />
 
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
 </FrameLayout>
