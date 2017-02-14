@@ -1,5 +1,7 @@
 package com.dev.bins.bandwagongclient.ui.fragment.common;
 
+import android.preference.PreferenceManager;
+
 import com.dev.bins.bandwagongclient.bean.ServerInfo;
 import com.dev.bins.bandwagongclient.net.NetWorkManager;
 
@@ -25,6 +27,9 @@ public class CommonPresenter implements CommonContract.Presenter {
 
     @Override
     public void subscribe() {
+
+        PreferenceManager.getDefaultSharedPreferences()
+
         mView.showLoad(true);
         Subscriber<ServerInfo> subscriber = new Subscriber<ServerInfo>() {
             @Override

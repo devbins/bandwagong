@@ -4,7 +4,18 @@
     android:layout_height="match_parent"
     tools:context="com.dev.bins.bandwagongclient.ui.fragment.common.CommonFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="主机名"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    
     <TextView
         android:id="@+id/info"
         android:layout_width="match_parent"
