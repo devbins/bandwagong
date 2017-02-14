@@ -1,9 +1,13 @@
 package com.dev.bins.bandwagongclient.ui.fragment.common;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.text.TextUtils;
 
 import com.dev.bins.bandwagongclient.bean.ServerInfo;
 import com.dev.bins.bandwagongclient.net.NetWorkManager;
+import com.dev.bins.bandwagongclient.util.SharePreferenceConstant;
 
 import rx.Subscriber;
 import rx.Subscription;
@@ -19,17 +23,29 @@ public class CommonPresenter implements CommonContract.Presenter {
 
     private CompositeSubscription mSubscriptions;
 
-    public CommonPresenter(CommonContract.View mView) {
+    private Context mContext;
+
+    public CommonPresenter(CommonContract.View mView, Context context) {
         this.mView = mView;
+        mContext = context;
         mView.setPresenter(this);
         mSubscriptions = new CompositeSubscription();
     }
 
     @Override
     public void subscribe() {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mContext);
+        String veid = sp.getString(SharePreferenceConstant.VEID, null);
+        String key = sp.getString(SharePreferenceConstant.key, null);
+        if (TextUtils.isEmpty(veid) || TextUtils.isEmpty(key)) {
+            mView.showHostDialog();
+            return;
+        }
+        load();
+    }
 
-        PreferenceManager.getDefaultSharedPreferences()
-
+    @Override
+    public void load() {
         mView.showLoad(true);
         Subscriber<ServerInfo> subscriber = new Subscriber<ServerInfo>() {
             @Override

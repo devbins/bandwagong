@@ -6,6 +6,8 @@ package com.dev.bins.bandwagongclient.util;
 
 public class SharePreferenceConstant {
 
+    public static final String NAME = "host";
+
     public static final String VEID = "veid";
     public static final String key = "key";
 

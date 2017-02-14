@@ -14,10 +14,12 @@ public interface CommonContract {
         void setText(String text);
 
         void showLoad(boolean loading);
+
+        void showHostDialog();
     }
 
 
     interface Presenter extends BasePresenter{
-
+        void load();
     }
 }
