@@ -63,6 +63,7 @@ public class CommonPresenter implements CommonContract.Presenter {
             @Override
             public void onNext(ServerInfo serverInfo) {
                 mView.setText(serverInfo.toString());
+                mView.fillData(serverInfo);
             }
         };
         Subscription subscription = NetWorkManager.getInstance().getServerInfo(subscriber, "471025", "private_bKsAUc4F9mmur33apTIagx8u");

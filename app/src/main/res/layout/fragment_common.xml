@@ -10,89 +10,152 @@
     android:layout_marginTop="@dimen/activity_vertical_margin"
     tools:context="com.dev.bins.bandwagongclient.ui.fragment.common.CommonFragment">
 
-    <android.support.v7.widget.CardView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="5dp"
-        app:contentPadding="3dp">
+        android:layout_height="match_parent">
 
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp"
+            app:contentPadding="3dp">
 
-            <TextView
-                style="@style/title"
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/host" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <TextView
-                style="@style/title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/location" />
+                <TextView
+                    style="@style/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/host" />
 
-            <TextView
-                style="@style/title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/os" />
+                <TextView
+                    android:id="@+id/tv_host"
+                    style="@style/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-            <TextView
-                style="@style/title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/ip" />
+                <TextView
+                    style="@style/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location" />
 
-            <TextView
-                style="@style/title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/ssh_port" />
+                <TextView
+                    android:id="@+id/tv_location"
+                    style="@style/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-            <TextView
-                style="@style/title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/status" />
+                <TextView
+                    style="@style/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/os" />
 
-            <TextView
-                style="@style/title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/ram" />
+                <TextView
+                    android:id="@+id/tv_os"
+                    style="@style/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-            <TextView
-                style="@style/title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/swap" />
+                <TextView
+                    style="@style/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ip" />
 
-            <TextView
-                style="@style/title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/disk_usage" />
+                <TextView
+                    android:id="@+id/tv_ip"
+                    style="@style/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
-            <TextView
-                style="@style/title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/bandwith_usage" />
+                <TextView
+                    style="@style/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ssh_port" />
+
+                <TextView
+                    android:id="@+id/tv_ssh_port"
+                    style="@style/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/status" />
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    style="@style/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ram" />
+
+                <TextView
+                    android:id="@+id/tv_ram"
+                    style="@style/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/swap" />
+
+                <TextView
+                    android:id="@+id/tv_swap"
+                    style="@style/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/disk_usage" />
+
+                <TextView
+                    android:id="@+id/tv_disk_usage"
+                    style="@style/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    style="@style/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bandwith_usage" />
+
+                <TextView
+                    android:id="@+id/tv_bandwith_usage"
+                    style="@style/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
 
 
-            <TextView
-                android:id="@+id/info"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:text="@string/common" />
-
-
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/common" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </android.support.v4.widget.NestedScrollView>
 
 </android.support.v4.widget.SwipeRefreshLayout>

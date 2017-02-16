@@ -17,6 +17,8 @@
 
 
     <style name="info" >
+        <item name="android:layout_marginLeft">@dimen/text_margin_left</item>
+        <item name="android:layout_marginTop">@dimen/text_margin_top</item>
         <item name="android:color">@color/infoColor</item>
         <item name="android:textSize">@dimen/textSize</item>
     </style>

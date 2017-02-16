@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.dev.bins.bandwagongclient.R;
 import com.dev.bins.bandwagongclient.VerifyDialog;
+import com.dev.bins.bandwagongclient.bean.ServerInfo;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,6 +29,28 @@ public class CommonFragment extends Fragment implements CommonContract.View, Swi
     TextView tv;
     @BindView(R.id.swipe_refresh)
     SwipeRefreshLayout mSwipeRefreshLayout;
+
+    @BindView(R.id.tv_host)
+    TextView mTvHost;
+    @BindView(R.id.tv_location)
+    TextView mTvLocation;
+    @BindView(R.id.tv_os)
+    TextView mTvOs;
+    @BindView(R.id.tv_ip)
+    TextView mTvIp;
+    @BindView(R.id.tv_ssh_port)
+    TextView mTvSshPort;
+    @BindView(R.id.tv_status)
+    TextView mTvStatus;
+    @BindView(R.id.tv_ram)
+    TextView mTvRam;
+    @BindView(R.id.tv_swap)
+    TextView mTvSwap;
+    @BindView(R.id.tv_disk_usage)
+    TextView mTvDiskUsage;
+    @BindView(R.id.tv_bandwith_usage)
+    TextView mTvBandwithUsage;
+
 
     private CommonContract.Presenter mPresenter;
 
@@ -89,6 +112,16 @@ public class CommonFragment extends Fragment implements CommonContract.View, Swi
     @Override
     public void showHostDialog() {
         new VerifyDialog(getActivity()).show();
+    }
+
+    @Override
+    public void fillData(ServerInfo serverInfo) {
+        mTvHost.setText(serverInfo.getHostname());
+        mTvLocation.setText(serverInfo.getNode_location());
+        mTvOs.setText(serverInfo.getOs());
+        mTvIp.setText(serverInfo.getNode_ip());
+        mTvRam.setText(serverInfo.getPlan_ram());
+        mTvSwap.setText(serverInfo.getPlan_swap());
     }
 
     @Override
