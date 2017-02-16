@@ -7,5 +7,15 @@
     <string name="key_hint">key</string>
     <string name="save">save</string>
     <string name="cancel">cancel</string>
+    <string name="host">主机名</string>
+    <string name="location">位置</string>
+    <string name="os">操作系统</string>
+    <string name="ip">IP地址</string>
+    <string name="ssh_port">SSH端口</string>
+    <string name="status">状态</string>
+    <string name="ram">RAM</string>
+    <string name="swap">SWAP</string>
+    <string name="disk_usage">磁盘使用情况</string>
+    <string name="bandwith_usage">带宽使用</string>
 
 </resources>
