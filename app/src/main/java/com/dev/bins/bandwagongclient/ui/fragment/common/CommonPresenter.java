@@ -50,7 +50,6 @@ public class CommonPresenter implements CommonContract.Presenter {
         Subscriber<ServerInfo> subscriber = new Subscriber<ServerInfo>() {
             @Override
             public void onCompleted() {
-                System.out.println("complete");
                 mView.showLoad(false);
             }
 

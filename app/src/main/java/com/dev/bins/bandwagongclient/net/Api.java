@@ -1,4 +1,4 @@
-package com.dev.bins.bandwagongclient;
+package com.dev.bins.bandwagongclient.net;
 
 import com.dev.bins.bandwagongclient.bean.AvailableOS;
 import com.dev.bins.bandwagongclient.bean.ResultCode;
@@ -65,7 +65,6 @@ public interface Api {
     @POST("setHostname")
     @FormUrlEncoded
     Observable<ResultCode> setHostname(@Field("veid") String veid, @Field("api_key") String api_key,@Field("newHostname")String newHostname);
-
 
 
 

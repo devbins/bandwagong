@@ -1,6 +1,5 @@
 package com.dev.bins.bandwagongclient.net;
 
-import com.dev.bins.bandwagongclient.Api;
 import com.dev.bins.bandwagongclient.bean.AvailableOS;
 import com.dev.bins.bandwagongclient.bean.ResultCode;
 import com.dev.bins.bandwagongclient.bean.ServerInfo;
@@ -89,6 +88,7 @@ public class NetWorkManager {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(subscriber);
     }
+
 
 
 }
